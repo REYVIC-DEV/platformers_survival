@@ -1,0 +1,188 @@
+html, body{
+    height: 100svh;
+}
+*{
+    margin: 0;
+}
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#body{
+    position: relative;
+    /* height: 550px;  
+    width: 1040px; */
+    height: 100%;
+    width: 100%;
+}
+
+#canvas_container{
+    /* flex: 1; */
+
+    height: 100%;
+    width: 100%;
+
+    border: 1px solid black;
+}
+
+.instruction{
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}
+
+#manac, #healthc, #expc{
+    z-index: 100;
+    position: relative;
+    /* --toptop:20px;   */
+    position: absolute;
+    /* bottom: .4em;
+    left: .7em; */
+    /* top: auto; */
+    /* left: auto; */
+    /* right: auto; */
+    /* bottom: auto; */
+
+    color: white;
+    background-color: red;
+    width: 200px;
+    height: 20px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#manac{
+    /* top: calc(var(--toptop) + 25px); */
+    background-color: black;
+}
+
+#expc{
+    /* top: calc(var(--toptop) + 25px); */
+    /* left: 400px; */
+    background-color: black;
+}
+
+#mbar, #hbar, #expbar{
+    position: absolute;
+    width: 200px;
+    height: 20px;
+
+    top: 0;
+    left: 0;
+
+    z-index: 0;
+}
+
+#mbar{
+    background-color: blue;
+}
+#hbar{
+    background-color: green;
+}
+#expbar{
+    background-color: grey;
+}
+
+#health, #mana, #exp{
+    z-index: 1;
+}
+
+canvas{
+    /* background-color: black; */
+    z-index: -1;
+}
+
+
+#mainMenuContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    
+    background-color: rgba(255, 255, 255, .5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainMenu, #gameOver{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 1em;
+
+    height: 500px;
+    width: 500px;
+}
+
+/* #mainMenu{
+    display: none;
+} */
+
+#gameOver{
+    visibility: hidden;
+    position: absolute;
+}
+
+#mainMenu img, #gameOver img{
+    object-fit: contain;
+    height: 50%;
+
+    cursor: unset;
+}
+
+#movement1, #movement2, #jumpUp, #dropDown, #shootEnem{
+    --right:500px;
+    position: absolute;
+    right: var(--right);
+    bottom: 10em;
+
+    z-index: 1000;
+
+    visibility: hidden;
+}
+
+#movement1{
+    right: calc(var(--right) + 60px);
+}
+
+#jumpUp, #dropDown, #shootEnem{
+    right: calc(var(--right) + 350px);
+    bottom: 15em;
+}
+
+#tDone{
+    position: absolute;
+    top: 4em;
+    left: 1em;
+
+    height: 200px;
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    z-index: 1000;
+    visibility: hidden;
+}
+
+canvas{
+    cursor: crosshair;
+}
